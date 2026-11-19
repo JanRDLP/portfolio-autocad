@@ -16,4 +16,4 @@ Automaticé tareas de dibujo y documentación, como trazar tuberías por diámet
 
 ## Planos y modelos interactivos
 
-Pendiente de incorporar la primera selección de planos en PDF y modelos en STL para girarlos y acercarlos en el visor de GitHub.
+[Ver codos de tubería en 3D](modelos/Codos.stl). Arrastra el modelo para girarlo y usa la rueda para acercar o alejar.
