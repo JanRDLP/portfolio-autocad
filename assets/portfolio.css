@@ -46,7 +46,8 @@ button,.button,select{cursor:pointer}
 .card:has(.card-copy:only-child){grid-template-columns:1fr}
 .viewer-picker{background:#0e1c29;padding:18px;border-radius:10px;display:grid;gap:8px;justify-items:start}
 .viewer-picker select{width:100%}
-.project-image{width:100%;max-height:210px;object-fit:contain}
+.project-image{width:100%;height:auto;max-height:210px;object-fit:contain}
+#terranoble .project-image{max-height:none;border-radius:8px}
 footer{border-top:1px solid var(--border);padding-block:20px 32px}
 dialog{border:1px solid var(--border);padding:0;border-radius:14px;background:var(--surface);color:var(--ink);width:min(1160px,96vw);max-width:none}
 dialog::backdrop{background:#040b13dd}
