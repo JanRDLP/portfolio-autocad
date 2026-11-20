@@ -14,9 +14,11 @@ Automaticé tareas de dibujo y documentación, como trazar tuberías por diámet
 
 [Ver las rutinas y su documentación](https://github.com/JanRDLP/autolisp-routines)
 
-## Planos y modelos interactivos
+## Sitio del portafolio
 
-[Ver codos de tubería en 3D](modelos/Codos.stl). Arrastra el modelo para girarlo y usa la rueda para acercar o alejar.
+Abre [index.html](index.html) desde una copia local del repositorio para explorar los proyectos y abrir los visores en la misma página.
+
+## Planos y modelos interactivos
 
 ### Visores de componentes de tubería
 

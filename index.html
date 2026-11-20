@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Portafolio de AutoCAD de Jan Horacio Rivera De la Puente. Modelado 3D, diseño de tuberías y automatización con AutoLISP.">
+<title>Jan Rivera · Portafolio de AutoCAD</title>
+<link rel="stylesheet" href="assets/portfolio.css">
+<script src="assets/portfolio.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<header class="top">
+  <nav class="wrap" aria-label="Navegación principal">
+    <a class="brand" href="#inicio">jan_rivera<span>.cad</span></a>
+    <div class="navlinks"><a href="#perfil">Perfil</a><a href="#herramientas">Herramientas</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a></div>
+  </nav>
+</header>
+<main id="contenido">
+<section class="hero wrap" id="inicio">
+  <div>
+    <p class="role">AutoCAD · Diseño de tuberías · AutoLISP</p>
+    <h1>Jan Horacio<br>Rivera De la Puente</h1>
+    <p class="lead">Modelo instalaciones y componentes de tubería, y desarrollo rutinas para agilizar su dibujo y documentación en AutoCAD.</p>
+    <div class="actions"><a class="button primary" href="#proyectos">Explorar proyectos</a><a class="button" href="https://janrdlp.github.io/janrivera/">Ver portafolio de QA</a></div>
+  </div>
+  <a class="feature" href="#componentes">
+    <img src="assets/codo-autocad.png" alt="Codo de tubería generado con CREARPIEZA en AutoCAD" fetchpriority="high">
+    <span><strong>Generación de componentes de tubería</strong><small>Ver el proyecto y sus modelos en 3D</small></span>
+  </a>
+</section>
+<section class="section wrap" id="perfil">
+  <h2>Perfil</h2>
+  <p class="intro">Trabajo con planos y modelos de instalaciones industriales. Uso AutoLISP para configurar accesorios, identificar piezas y extraer información del dibujo para documentar los proyectos.</p>
+</section>
+<section class="section wrap" id="herramientas">
+  <h2>Herramientas</h2>
+  <ul class="stack"><li>AutoCAD 2D y 3D</li><li>AutoLISP</li><li>Bloques y capas</li><li>Exportación a CSV</li></ul>
+</section>
+<section class="section wrap" id="proyectos">
+  <h2>Proyectos</h2>
+  <div class="filters" role="group" aria-label="Filtrar proyectos">
+    <button type="button" data-filter="all" aria-pressed="true">Todos</button><button type="button" data-filter="modelos" aria-pressed="false">Modelado 3D</button><button type="button" data-filter="autolisp" aria-pressed="false">AutoLISP</button>
+  </div>
+  <div class="projects">
+    <article id="componentes" class="card" data-category="modelos autolisp">
+      <div class="card-copy">
+        <p class="role">Modelado 3D y AutoLISP</p>
+        <h3>Generación de componentes de tubería</h3>
+        <p>Desarrollé <code>CREARPIEZA</code> para configurar un accesorio y revisar su etiqueta, bloque y capa antes de insertarlo en el dibujo. Los visores permiten girar las piezas y consultar la etiqueta original de cada una.</p>
+        <div class="actions"><a class="button" href="https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation">Código y ejemplo de uso</a></div>
+      </div>
+      <div class="viewer-picker">
+        <h4>Biblioteca de accesorios</h4>
+        <label for="family">Familia de piezas</label>
+        <select id="family">
+          <option value="codos">Codos</option><option value="tees">Tees</option><option value="cruces">Cruces</option>
+          <option value="brida">Bridas</option><option value="cople">Coples</option><option value="niple">Niples</option>
+          <option value="reduccion">Reducciones</option><option value="tapon">Tapones</option><option value="filtro-yee">Filtros en Y</option>
+          <option value="valvula-bola">Válvulas de bola</option><option value="valvula-check">Válvulas check</option><option value="valvula-globo">Válvulas de globo</option>
+        </select>
+        <a class="button primary" id="family-viewer" href="visores/visor-codos.html" data-open-viewer>Abrir visor 3D</a>
+      </div>
+    </article>
+    <article id="terranoble" class="card" data-category="modelos">
+      <div class="card-copy">
+        <p class="role">Modelado de instalaciones</p>
+        <h3>Terranoble y planta piloto</h3>
+        <p>Vista 3D de la planta y sus servicios, con la geometría de los sólidos y bloques extraída del DWG. Los colores del dibujo ayudan a distinguir las instalaciones al recorrer el modelo.</p>
+        <div class="actions"><a class="button primary" href="visores/visor-terranoble-dwg.html" data-open-viewer>Abrir visor de Terranoble</a></div>
+      </div>
+    </article>
+    <article id="rutinas" class="card" data-category="autolisp">
+      <div class="card-copy">
+        <p class="role">Automatización de dibujo</p>
+        <h3>Capas, etiquetado e inventario</h3>
+        <p>Uso <code>DN</code> para dibujar tuberías por diámetro nominal, <code>LayerControl</code> para controlar la visibilidad de capas y <code>ExportarEtiquetas</code> para generar un inventario en CSV.</p>
+        <div class="actions"><a class="button" href="https://github.com/JanRDLP/autolisp-routines">Ver rutinas y documentación</a></div>
+      </div>
+      <img class="project-image" src="assets/control-de-capas.png" alt="Panel de control de capas en AutoCAD" loading="lazy">
+    </article>
+  </div>
+</section>
+<section class="section wrap" id="contacto">
+  <h2>Contacto</h2>
+  <div class="actions"><a class="button" href="https://www.linkedin.com/in/jan-horacio-rivera-de-la-puente/">LinkedIn</a><a class="button" href="https://github.com/JanRDLP">GitHub</a></div>
+</section>
+</main>
+<footer class="wrap">Jan Horacio Rivera De la Puente</footer>
+<dialog id="viewer" aria-labelledby="viewer-title">
+  <div class="dialog-head"><h2 id="viewer-title">Visor 3D</h2><form method="dialog"><button type="submit" autofocus>Cerrar</button></form></div>
+  <iframe title="Modelo interactivo de AutoCAD"></iframe>
+</dialog>
+</body>
+</html>
