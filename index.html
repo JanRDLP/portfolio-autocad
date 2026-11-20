@@ -49,19 +49,19 @@
         <h3>Generación de componentes de tubería</h3>
         <p>Desarrollé <code>CREARPIEZA</code> para configurar un accesorio y revisar su etiqueta, bloque y capa antes de insertarlo en el dibujo. Los visores permiten girar las piezas y consultar la etiqueta original de cada una.</p>
         <div class="actions"><a class="button" href="https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation">Código y ejemplo de uso</a></div>
+        <div class="viewer-picker">
+          <label for="family">Familia de piezas</label>
+          <select id="family">
+            <option value="codos">Codos</option><option value="tees">Tees</option><option value="cruces">Cruces</option>
+            <option value="brida">Bridas</option><option value="cople">Coples</option><option value="niple">Niples</option>
+            <option value="reduccion">Reducciones</option><option value="tapon">Tapones</option><option value="filtro-yee">Filtros en Y</option>
+            <option value="valvula-bola">Válvulas de bola</option><option value="valvula-check">Válvulas check</option><option value="valvula-globo">Válvulas de globo</option>
+          </select>
+          <a class="button primary" id="family-viewer" href="visores/visor-codos.html" data-open-viewer>Abrir visor 3D</a>
+        </div>
       </div>
-      <div class="viewer-picker">
-        <img class="project-image" src="assets/crear-pieza.png" alt="Cuadro de diálogo de CREARPIEZA con la configuración de un codo y su etiqueta de AutoLISP" width="721" height="682" loading="lazy">
-        <h4>Biblioteca de accesorios</h4>
-        <label for="family">Familia de piezas</label>
-        <select id="family">
-          <option value="codos">Codos</option><option value="tees">Tees</option><option value="cruces">Cruces</option>
-          <option value="brida">Bridas</option><option value="cople">Coples</option><option value="niple">Niples</option>
-          <option value="reduccion">Reducciones</option><option value="tapon">Tapones</option><option value="filtro-yee">Filtros en Y</option>
-          <option value="valvula-bola">Válvulas de bola</option><option value="valvula-check">Válvulas check</option><option value="valvula-globo">Válvulas de globo</option>
-        </select>
-        <a class="button primary" id="family-viewer" href="visores/visor-codos.html" data-open-viewer>Abrir visor 3D</a>
-      </div>
+      <img class="project-image" src="assets/crear-pieza.png" alt="Cuadro de diálogo de CREARPIEZA con la configuración de un codo y su etiqueta de AutoLISP" width="721" height="682" loading="lazy">
+
     </article>
     <article id="terranoble" class="card" data-category="modelos">
       <div class="card-copy">
