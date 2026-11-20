@@ -17,3 +17,20 @@ Automaticé tareas de dibujo y documentación, como trazar tuberías por diámet
 ## Planos y modelos interactivos
 
 [Ver codos de tubería en 3D](modelos/Codos.stl). Arrastra el modelo para girarlo y usa la rueda para acercar o alejar.
+
+### Visores de componentes de tubería
+
+Descarga el HTML con **Download raw file** y ábrelo en tu navegador. Cada visor funciona sin conexión. Arrastra para girar, usa la rueda para acercar y selecciona una pieza para leer su etiqueta de AutoLISP.
+
+- [Codos](visores/visor-codos.html)
+- [Tees](visores/visor-tees.html)
+- [Cruces](visores/visor-cruces.html)
+- [Bridas](visores/visor-brida.html)
+- [Coples](visores/visor-cople.html)
+- [Niples](visores/visor-niple.html)
+- [Reducciones](visores/visor-reduccion.html)
+- [Tapones](visores/visor-tapon.html)
+- [Válvulas de bola](visores/visor-valvula-bola.html)
+- [Válvulas check](visores/visor-valvula-check.html)
+- [Filtros en Y](visores/visor-filtro-yee.html)
+- [Válvulas de globo](visores/visor-valvula-globo.html)
