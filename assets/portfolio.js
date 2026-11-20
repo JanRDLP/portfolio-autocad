@@ -101,7 +101,7 @@ for (const link of document.querySelectorAll('[data-project]')) {
     gallery.querySelector('#gallery-title').textContent = project.title;
     gallery.querySelector('#gallery-summary').textContent = project.overview;
     gallery.querySelector('#gallery-work').textContent = project.work;
-    gallery.querySelector('#gallery-case').href = 'https://github.com/JanRDLP/portafolio-autocad/blob/main/projects/' + project.slug + '.md';
+    gallery.querySelector('#gallery-case').href = 'https://github.com/JanRDLP/portfolio-autocad/blob/main/projects/' + project.slug + '.md';
     controls.hidden = thumbnails.hidden = screenshots.length < 2;
     thumbnails.replaceChildren(...screenshots.map((screenshot, index) => {
       const button = document.createElement('button');
