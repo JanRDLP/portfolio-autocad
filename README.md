@@ -1,42 +1,30 @@
-# Portafolio de AutoCAD
+# AutoCAD Portfolio
 
-Jan Rivera · Dibujo técnico, modelado 3D y automatización con AutoLISP.
+Jan Horacio Rivera De la Puente · Industrial CAD design, piping, and AutoLISP automation.
 
-## Generación de componentes 3D para tubería
+## Portfolio website
 
-Desarrollé el comando `CREARPIEZA` para configurar e insertar accesorios en AutoCAD. El cuadro de diálogo permite definir el tipo y tamaño del componente y revisar su etiqueta, nombre de bloque y capa antes de colocarlo en el dibujo.
+Open [index.html](index.html) from a local copy of this repository to explore the projects, enlarge screenshots, and open the interactive 3D viewers within the page. The viewers also work offline as standalone HTML files.
 
-[Ver el código y el ejemplo de uso](https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation)
+## Project case studies
 
-## Rutinas de AutoLISP para planos de tubería
+- [Piping Component Generation](projects/piping-component-generation.md) · [Source code](https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation)
+- [Terranoble and Pilot Plant](projects/terranoble-pilot-plant.md) · [Download the 3D viewer](visores/visor-terranoble-dwg.html?raw=true) (21 MB)
+- [Layer Control, Tagging, and Inventory](projects/layer-control-tagging-inventory.md) · [Source code](https://github.com/JanRDLP/autolisp-routines)
 
-Automaticé tareas de dibujo y documentación, como trazar tuberías por diámetro nominal con `DN`, controlar la visibilidad de capas con `LayerControl` y exportar etiquetas de componentes a CSV con `ExportarEtiquetas`.
+## Interactive piping library
 
-[Ver las rutinas y su documentación](https://github.com/JanRDLP/autolisp-routines)
+Download a viewer and open the HTML in your browser. Drag to rotate, scroll to zoom, and select a component to read its original AutoLISP label.
 
-## Sitio del portafolio
-
-Abre [index.html](index.html) desde una copia local del repositorio para explorar los proyectos y abrir los visores en la misma página.
-
-## Planos y modelos interactivos
-
-### Visores de componentes de tubería
-
-Descarga el HTML con **Download raw file** y ábrelo en tu navegador. Cada visor funciona sin conexión. Arrastra para girar, usa la rueda para acercar y selecciona una pieza para leer su etiqueta de AutoLISP.
-
-- [Codos](visores/visor-codos.html)
+- [Elbows](visores/visor-codos.html)
 - [Tees](visores/visor-tees.html)
-- [Cruces](visores/visor-cruces.html)
-- [Bridas](visores/visor-brida.html)
-- [Coples](visores/visor-cople.html)
-- [Niples](visores/visor-niple.html)
-- [Reducciones](visores/visor-reduccion.html)
-- [Tapones](visores/visor-tapon.html)
-- [Válvulas de bola](visores/visor-valvula-bola.html)
-- [Válvulas check](visores/visor-valvula-check.html)
-- [Filtros en Y](visores/visor-filtro-yee.html)
-- [Válvulas de globo](visores/visor-valvula-globo.html)
-
-### Terranoble y planta piloto
-
-[Descargar el visor 3D de Terranoble](visores/visor-terranoble-dwg.html?raw=true) (21 MB). Abre el HTML en tu navegador para explorar la planta y su geometría extraída del DWG. Arrastra para girar, usa la rueda para acercar y mantén Mayús al arrastrar para desplazar la vista.
+- [Crosses](visores/visor-cruces.html)
+- [Flanges](visores/visor-brida.html)
+- [Couplings](visores/visor-cople.html)
+- [Nipples](visores/visor-niple.html)
+- [Reducers](visores/visor-reduccion.html)
+- [Caps and plugs](visores/visor-tapon.html)
+- [Ball valves](visores/visor-valvula-bola.html)
+- [Check valves](visores/visor-valvula-check.html)
+- [Y-strainers](visores/visor-filtro-yee.html)
+- [Globe valves](visores/visor-valvula-globo.html)

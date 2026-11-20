@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Codos de tubería · Visor 3D</title>
+<title>Pipe Elbows · 3D Viewer</title>
 <style>
 *{box-sizing:border-box} body{margin:0;background:#eef2f6;color:#122235;font:16px system-ui,sans-serif}
 main{max-width:1100px;margin:auto;padding:32px 20px} h1{margin:0;font-size:clamp(27px,5vw,42px);letter-spacing:-.04em}
@@ -13,14 +13,14 @@ label{display:block;font-weight:650;margin-top:18px} select{margin-top:7px;font:
 output{display:block;margin-top:14px;min-height:1.5em;font-weight:650;color:#124e83}
 </style>
 <main>
-<h1>Codos de tubería</h1>
-<p>Arrastra para girar, acerca con la rueda y selecciona un codo para ver su etiqueta de AutoLISP.</p>
+<h1>Pipe Elbows</h1>
+<p>Drag to rotate, scroll to zoom, and select a component to read its original AutoLISP label.</p>
 <div class="viewer">
-<canvas aria-label="Vista interactiva de siete codos de tubería"></canvas>
-<div class="toolbar"><button id="out" aria-label="Alejar">−</button><button id="in" aria-label="Acercar">+</button><button id="reset">Restablecer vista</button></div>
+<canvas aria-label="Interactive 3D model of Pipe Elbows"></canvas>
+<div class="toolbar"><button id="out" aria-label="Zoom out">−</button><button id="in" aria-label="Zoom in">+</button><button id="reset">Reset view</button></div>
 </div>
-<label for="pieces">Seleccionar pieza</label>
-<select id="pieces"><option value="-1">Elige un codo</option></select>
+<label for="pieces">Select a component</label>
+<select id="pieces"><option value="-1">Choose a component</option></select>
 <output aria-live="polite"></output>
 </main>
 <script>
