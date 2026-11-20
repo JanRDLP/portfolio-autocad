@@ -37,4 +37,4 @@ Descarga el HTML con **Download raw file** y ábrelo en tu navegador. Cada visor
 
 ### Terranoble y planta piloto
 
-[Descargar el visor 3D de Terranoble](visores/visor-terranoble-dwg.html?raw=true) (50 MB). Abre el HTML en tu navegador para explorar la planta y su geometría extraída del DWG. Arrastra para girar, usa la rueda para acercar y mantén Mayús al arrastrar para desplazar la vista.
+[Descargar el visor 3D de Terranoble](visores/visor-terranoble-dwg.html?raw=true) (21 MB). Abre el HTML en tu navegador para explorar la planta y su geometría extraída del DWG. Arrastra para girar, usa la rueda para acercar y mantén Mayús al arrastrar para desplazar la vista.
