@@ -46,6 +46,7 @@ button,.button,select{cursor:pointer}
 .card:has(.card-copy:only-child){grid-template-columns:1fr}
 .viewer-picker{background:#0e1c29;padding:18px;border-radius:10px;display:grid;gap:8px;justify-items:start}
 .viewer-picker select{width:100%}
+.viewer-picker .project-image{max-height:none;border-radius:8px}
 .project-image{width:100%;height:auto;max-height:210px;object-fit:contain}
 #terranoble .project-image{max-height:none;border-radius:8px}
 footer{border-top:1px solid var(--border);padding-block:20px 32px}
