@@ -62,11 +62,61 @@ const caseStudies = {
     ]
   }
 };
+const terranobleScreenshots = [
+  {
+    "src": "assets/terranoble/plant-overview.png",
+    "alt": "Plant equipment and utility routing",
+    "caption": "Plant equipment and utility routing — The isometric overview shows the retort bank, conveyor-connected equipment, and the cooling-water area. Color-coded headers and branches show how utilities are routed between these areas."
+  },
+  {
+    "src": "assets/terranoble/surdry-retorts.png",
+    "alt": "Surdry retort utility connections",
+    "caption": "Surdry retort utility connections — At the Surdry retort bank, the model distinguishes cooling-water supply and treated return, process water, compressed air, steam, and drainage. Brown identifies safety-valve piping, and pale yellow identifies vent piping."
+  },
+  {
+    "src": "assets/terranoble/packaging-air.png",
+    "alt": "Compressed air at the packaging equipment",
+    "caption": "Compressed air at the packaging equipment — Yellow overhead compressed-air piping runs along this conveyor-linked equipment area, with drops routed toward the individual machines."
+  },
+  {
+    "src": "assets/terranoble/handling-equipment.png",
+    "alt": "Product-handling equipment and utility drops",
+    "caption": "Product-handling equipment and utility drops — The view shows two enclosed product-handling stations and their conveyor interfaces. Yellow compressed-air and cyan process-water drops are visible around the stations."
+  },
+  {
+    "src": "assets/terranoble/filler-utilities.png",
+    "alt": "Filler utility connections",
+    "caption": "Filler utility connections — Cyan process water, yellow compressed air, and bright pink steam run alongside the conveyor. The close-up highlights the drops and valve assemblies at the filler connection area."
+  },
+  {
+    "src": "assets/terranoble/feed-area.png",
+    "alt": "Feed and transfer equipment",
+    "caption": "Feed and transfer equipment — The view shows inclined conveyors, hoppers, and adjacent process equipment. Cyan process-water and bright pink steam branches run through the equipment area, a dark blue cooling-water main crosses overhead, and a light pink drain run is visible near floor level."
+  },
+  {
+    "src": "assets/terranoble/cooling-water-loop.png",
+    "alt": "Cooling tower and water recirculation",
+    "caption": "Cooling tower and water recirculation — Dark blue marks the cooling-water supply, and medium blue marks the return routed through treatment for reuse. The cooling tower removes heat before the water recirculates."
+  }
+];
+const utilityColors = [["Dark blue","Cooling-water supply","#3040fa"],["Medium blue","Treated cooling-water return for recirculation","#1680da"],["Cyan","Process water","#00dce6"],["Yellow","Compressed air","#f3db16"],["Bright pink","Steam","#ee2de7"],["Light pink","Drainage","#f5a0dd"],["Brown","Safety-valve piping","#a37651"],["Pale yellow","Vent piping","#fff3a1"]];
+
 const gallery = document.querySelector('#gallery');
 const image = gallery.querySelector('#gallery-image');
 const caption = gallery.querySelector('#gallery-caption');
 const position = gallery.querySelector('#image-position');
 const controls = gallery.querySelector('#gallery-controls');
+const utilityLegend = gallery.querySelector('#utility-legend');
+const utilityList = utilityLegend.querySelector('ul');
+for (const [color, service, swatchColor] of utilityColors) {
+  const item = document.createElement('li');
+  const swatch = document.createElement('span');
+  swatch.className = 'utility-swatch';
+  swatch.style.backgroundColor = swatchColor;
+  swatch.setAttribute('aria-hidden', 'true');
+  item.append(swatch, color + ' · ' + service);
+  utilityList.append(item);
+}
 const thumbnails = document.createElement('div');
 thumbnails.className = 'gallery-thumbnails';
 thumbnails.setAttribute('role', 'group');
@@ -94,6 +144,9 @@ for (const link of document.querySelectorAll('[data-project]')) {
     const project = caseStudies[link.dataset.project];
     const preview = document.querySelector('.project-preview[data-project="' + link.dataset.project + '"] img');
     screenshots = [{src: preview.src, alt: preview.alt, caption: project.evidence[0]}];
+    const isTerranoble = link.dataset.project === 'terranoble';
+    utilityLegend.hidden = !isTerranoble;
+    if (isTerranoble) screenshots.push(...terranobleScreenshots);
     if (link.dataset.project === 'componentes') {
       const result = document.querySelector('.feature img');
       screenshots.push({src: result.src, alt: result.alt, caption: project.evidence[1]});
