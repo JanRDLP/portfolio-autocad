@@ -33,35 +33,128 @@ for (const link of document.querySelectorAll('[data-open-viewer]')) {
 viewer.addEventListener('close', () => frame.removeAttribute('src'));
 
 const caseStudies = {
+  "terranoble": {
+    "slug": "terranoble-pilot-plant",
+    "title": "Terranoble · Tetra Recart R2 Line Installation",
+    "overview": "The Tetra Recart R2 installation required coordinating equipment placement and utility connections for a food production line and its pilot plant. The AutoCAD model gave the installation team a common layout for reviewing how equipment, conveyors, and services would fit together.",
+    "work": "I reviewed the supplier’s equipment and utility drawings, adjusted equipment coordinates, and modeled the service routes in AutoCAD 3D. I also supervised civil works and worked with the team to plan a temporary feed line.",
+    "workflow": [
+      "Identify equipment footprints, positions, and service connection points from the installation drawings.",
+      "Update the plant layout and route services around the filler, retorts, and adjacent handling equipment.",
+      "Use layer colors to distinguish utility systems and review how individual branches connect to the equipment."
+    ],
+    "result": "The annotated views show the modeled utility routes and equipment interfaces. The DWG-derived 3D viewer keeps the object and layer colors so each service can be followed around the facility.",
+    "evidence": [
+      "Plan view of equipment placement and utility routing."
+    ]
+  },
   "componentes": {
     "slug": "piping-component-generation",
     "title": "Piping Component Generation",
-    "overview": "The routine streamlines the insertion of standard 3D piping fittings and keeps geometry, naming, and component tags consistent across a drawing.",
-    "work": "I developed the CREARPIEZA workflow in AutoLISP. It previews the component label, block name, and destination layer before placement. The resulting geometry can be reviewed in 12 component families.",
+    "overview": "Industrial piping layouts repeatedly use fittings that vary by nominal size, material, schedule, and connection. Each insertion needs geometry, naming, and identification data that match the selected specification.",
+    "work": "I developed CREARPIEZA in AutoLISP. Its guided dialog filters catalog choices by component family and previews the tag, block name, and destination layer before placement.",
+    "workflow": [
+      "Select a component family and the material, connection, size, and schedule or class that apply.",
+      "Confirm the preview and place the 3D component in the drawing. For straight pipe, pick two endpoints to create a tagged solid with its measured length.",
+      "Inspect stored part data with DATOSPIEZA. The XDATA links the modeled component to information used in downstream inventory workflows."
+    ],
+    "result": "The gallery documents the dialog and nine modeled fitting and valve families. The 3D library contains 12 families with their original AutoLISP labels. The simplified geometry is intended for CAD layout and documentation.",
     "evidence": [
-      "Configure a fitting and review the generated tag, block name, and destination layer.",
-      "Inspect the resulting 3D elbow in AutoCAD."
+      "The CREARPIEZA dialog is set to a ½-inch nominal Schedule 40 black-steel pipe segment. After the user picks the start and end points, the command creates a tagged 3D solid and stores the measured length on the solid."
     ]
   },
-  "terranoble": {
-    "slug": "terranoble-pilot-plant",
-    "title": "Terranoble and Pilot Plant",
-    "overview": "The model brings equipment, facility geometry, and utility routing together in an AutoCAD layout for the Terranoble site and its pilot plant.",
-    "work": "The portfolio includes a top-view screenshot and an interactive model extracted from the DWG. The viewer retains object and layer colors to help readers distinguish utility systems while orbiting the facility.",
+  "inventory": {
+    "slug": "piping-inventory-automation",
+    "title": "Piping Inventory Automation",
+    "overview": "A materials takeoff needs to connect each item back to its drawing specification, service, and location. The project applies that link to a CSV export for review and procurement.",
+    "work": "I developed an AutoLISP workflow that creates and identifies piping parts in AutoCAD and transfers the tagged records to a structured CSV. I used the export to consolidate a materials list for a quotation and a purchase order.",
+    "workflow": [
+      "Create or tag each component and record the relevant drawing context.",
+      "Export the records with service, component type, nominal size, original tag, commercial description, and length where applicable.",
+      "Review and consolidate the exported records into a materials list."
+    ],
+    "result": "The project export contains 1,409 records across 17 component types and 10 service categories. The portfolio shows an eight-row excerpt of the export.",
     "evidence": [
-      "Review equipment placement and utility routing in the plan view."
+      "Eight sample rows showing the service, component type, size, length, and part tag."
     ]
   },
   "rutinas": {
     "slug": "layer-control-tagging-inventory",
-    "title": "Layer Control, Tagging, and Inventory",
-    "overview": "These routines support drafting and documentation tasks that recur across industrial piping drawings.",
-    "work": "DN drafts pipework by nominal diameter. LayerControl groups layers so they can be shown or hidden together. ExportarEtiquetas reads the original component tags and exports an inventory to CSV.",
+    "title": "AutoCAD Drafting Utilities",
+    "overview": "Layer visibility, repeated geometry, and dimensioned pipe profiles are recurring drafting tasks. I built three standalone AutoLISP commands so each task can be handled directly in the drawing.",
+    "work": "I used a grouped dialog for layer visibility, command-line inputs for repeated copy placement, and dimension tables to resolve pipe profiles by material, schedule, and nominal size.",
+    "workflow": [
+      "LAYERCONTROL groups layers by phase, discipline, and equipment area. It supports changing one group at a time or setting all groups visible or hidden.",
+      "COPIARMULTIPLE takes a selection, spacing, copy count, and an axis or angled vector. The example places five copies at 200 drawing units along a 5° vector in the XZ plane.",
+      "DN creates a pipe profile as concentric circles or a region. The example shows a 4-inch Schedule 40 black-steel pipe with a 114.3 mm outside diameter and a 102.26 mm inside diameter."
+    ],
+    "result": "The screenshots show the Layer Control interface, the resulting copy pattern and displacement log, and the DN geometry alongside its reported diameters.",
     "evidence": [
-      "Control the visibility of related AutoCAD layers from a single panel."
+      "LAYERCONTROL groups drawing layers by phase, discipline, and equipment area. The dialog offers per-group checkboxes, visibility controls for all groups, and a rule for showing Phase 1-only layers."
     ]
   }
 };
+
+const draftingScreenshots = [
+  {
+    "src": "assets/drafting-utilities/vector-copy.png",
+    "alt": "Repeated copies along a vector",
+    "caption": "COPIARMULTIPLE creates five copies at 200 drawing units between placements, along a vector angled 5° from the X axis in the XZ plane. The command log shows the displacement of each copy."
+  },
+  {
+    "src": "assets/drafting-utilities/dn-profile.png",
+    "alt": "Nominal-diameter pipe profile",
+    "caption": "DN creates concentric circles for a nominal 4-inch Schedule 40 black-steel pipe. The command reports a 114.3 mm outside diameter and a 102.26 mm inside diameter."
+  }
+];
+const componentScreenshots = [
+  {
+    "src": "assets/piping-components/flanges.png",
+    "alt": "Flange variants",
+    "caption": "Weld-neck, hubless, and blind flange models shown side by side. The view highlights differences in hub profile, bore, and the closed face of the blind flange."
+  },
+  {
+    "src": "assets/piping-components/elbows.png",
+    "alt": "Pipe elbow variants",
+    "caption": "A lineup of 45° and 90° elbows shows how bend geometry and end profiles vary across the available options. The open ends show the modeled internal passage."
+  },
+  {
+    "src": "assets/piping-components/crosses.png",
+    "alt": "Four-way crosses",
+    "caption": "Three cross fittings show different end profiles. The isometric view makes it possible to compare the branch geometry and internal openings."
+  },
+  {
+    "src": "assets/piping-components/y-strainers.png",
+    "alt": "Y-strainers",
+    "caption": "Two flanged Y-strainers and a compact threaded variant show alternative connection geometries and the angled strainer branch."
+  },
+  {
+    "src": "assets/piping-components/reducers.png",
+    "alt": "Reducers and bushing",
+    "caption": "A bell reducer, a hex reducing bushing, and two tapered reducers show different ways to transition between nominal pipe sizes."
+  },
+  {
+    "src": "assets/piping-components/tees.png",
+    "alt": "Three-way tees",
+    "caption": "Three tee models compare end profiles and wall transitions at the junction of the main run and branch."
+  },
+  {
+    "src": "assets/piping-components/ball-valves.png",
+    "alt": "Ball valve variants",
+    "caption": "Flanged and threaded ball valve models show differences in body geometry, connections, and lever clearance in the layout."
+  },
+  {
+    "src": "assets/piping-components/check-valves.png",
+    "alt": "Check valve variants",
+    "caption": "Flanged and threaded check valve models show a range of body profiles and connection styles for placement in the piping layout."
+  },
+  {
+    "src": "assets/piping-components/globe-valves.png",
+    "alt": "Globe valve variants",
+    "caption": "Flanged and threaded globe valve models shown with their stems and handwheels. The view highlights the connection geometry and the height of the operating assembly."
+  }
+];
+
 const terranobleScreenshots = [
   {
     "src": "assets/terranoble/plant-overview.png",
@@ -103,6 +196,7 @@ const utilityColors = [["Dark blue","Cooling-water supply","#3040fa"],["Medium b
 
 const gallery = document.querySelector('#gallery');
 const image = gallery.querySelector('#gallery-image');
+const imageStage = gallery.querySelector('.gallery-stage');
 const caption = gallery.querySelector('#gallery-caption');
 const position = gallery.querySelector('#image-position');
 const controls = gallery.querySelector('#gallery-controls');
@@ -125,10 +219,18 @@ controls.before(thumbnails);
 let screenshots = [];
 let currentImage = 0;
 
+function screenshotKind(source) {
+  if (source.endsWith('/inventory-preview.png')) return 'data';
+  if (source.endsWith('/pipe-segment-dialog.png') || source.endsWith('/layer-control.png')) return 'interface';
+  return 'cad';
+}
+
 function showImage(index) {
   currentImage = (index + screenshots.length) % screenshots.length;
   const screenshot = screenshots[currentImage];
   image.src = screenshot.src;
+  imageStage.dataset.imageKind = screenshotKind(image.src);
+  imageStage.style.setProperty('--image-glow', 'url(' + JSON.stringify(image.src) + ')');
   image.alt = screenshot.alt;
   caption.textContent = screenshot.caption;
   position.textContent = (currentImage + 1) + ' / ' + screenshots.length;
@@ -137,24 +239,83 @@ function showImage(index) {
   }
 }
 
+const projectSlides = new Map();
+const selectedSlide = new Map();
+const galleryTools = gallery.querySelector('#gallery-tools');
+const galleryActions = gallery.querySelectorAll('[data-gallery-action]');
+
+for (const card of projects) {
+  const id = card.id;
+  const preview = card.querySelector('.project-preview');
+  const picture = preview.querySelector('img');
+  const slides = [{src: picture.getAttribute('src'), alt: picture.alt, caption: caseStudies[id].evidence[0]}];
+  if (id === 'terranoble') slides.push(...terranobleScreenshots);
+  if (id === 'componentes') slides.push(...componentScreenshots);
+  if (id === 'rutinas') slides.push(...draftingScreenshots);
+  projectSlides.set(id, slides);
+  selectedSlide.set(id, 0);
+  const setPreviewBackground = () => {
+    preview.dataset.imageKind = screenshotKind(picture.src);
+    preview.style.setProperty('--preview-glow', 'url(' + JSON.stringify(picture.src) + ')');
+  };
+  setPreviewBackground();
+  card.addEventListener('click', event => {
+    if (!event.target.closest('button, a, select, label') && !window.getSelection()?.toString()) {
+      card.querySelector('.project-title').click();
+    }
+  });
+  if (slides.length < 2) continue;
+  const media = document.createElement('div');
+  media.className = 'card-media';
+  preview.before(media);
+  media.append(preview);
+  const nav = document.createElement('div');
+  nav.className = 'card-gallery';
+  nav.setAttribute('role', 'group');
+  nav.setAttribute('aria-label', 'Project screenshots');
+  const counter = document.createElement('span');
+  counter.setAttribute('aria-live', 'polite');
+  counter.textContent = '1 / ' + slides.length;
+  const makeButton = (label, glyph, direction) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.setAttribute('aria-label', label);
+    button.textContent = glyph;
+    button.addEventListener('click', () => {
+      const index = (selectedSlide.get(id) + direction + slides.length) % slides.length;
+      selectedSlide.set(id, index);
+      picture.src = slides[index].src;
+      picture.alt = slides[index].alt;
+      preview.href = slides[index].src;
+      setPreviewBackground();
+      counter.textContent = (index + 1) + ' / ' + slides.length;
+    });
+    return button;
+  };
+  nav.append(makeButton('Previous screenshot', '‹', -1), counter, makeButton('Next screenshot', '›', 1));
+  media.append(nav);
+}
+
 for (const link of document.querySelectorAll('[data-project]')) {
   link.addEventListener('click', event => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !gallery.showModal) return;
     event.preventDefault();
-    const project = caseStudies[link.dataset.project];
-    const preview = document.querySelector('.project-preview[data-project="' + link.dataset.project + '"] img');
-    screenshots = [{src: preview.src, alt: preview.alt, caption: project.evidence[0]}];
-    const isTerranoble = link.dataset.project === 'terranoble';
-    utilityLegend.hidden = !isTerranoble;
-    if (isTerranoble) screenshots.push(...terranobleScreenshots);
-    if (link.dataset.project === 'componentes') {
-      const result = document.querySelector('.feature img');
-      screenshots.push({src: result.src, alt: result.alt, caption: project.evidence[1]});
-    }
+    const id = link.dataset.project;
+    const project = caseStudies[id];
+    screenshots = projectSlides.get(id);
+    utilityLegend.hidden = id !== 'terranoble';
+    galleryTools.hidden = id !== 'componentes';
+    for (const action of galleryActions) action.hidden = action.dataset.galleryAction !== id;
     gallery.querySelector('#gallery-title').textContent = project.title;
     gallery.querySelector('#gallery-summary').textContent = project.overview;
-    gallery.querySelector('#gallery-work').textContent = project.work;
-    gallery.querySelector('#gallery-case').href = 'https://github.com/JanRDLP/portfolio-autocad/blob/main/projects/' + project.slug + '.md';
+    gallery.querySelector('#gallery-contribution').textContent = project.work;
+    gallery.querySelector('#gallery-workflow').replaceChildren(...project.workflow.map(step => {
+      const item = document.createElement('li');
+      item.textContent = step;
+      return item;
+    }));
+    gallery.querySelector('#gallery-result').textContent = project.result;
+    gallery.querySelector('#gallery-case').href = 'projects/' + project.slug + '.md';
     controls.hidden = thumbnails.hidden = screenshots.length < 2;
     thumbnails.replaceChildren(...screenshots.map((screenshot, index) => {
       const button = document.createElement('button');
@@ -167,8 +328,10 @@ for (const link of document.querySelectorAll('[data-project]')) {
       button.addEventListener('click', () => showImage(index));
       return button;
     }));
-    showImage(link.hasAttribute('data-result-preview') ? 1 : 0);
+    const featured = screenshots.findIndex(screenshot => screenshot.src === link.dataset.featureImage);
+    showImage(featured >= 0 ? featured : selectedSlide.get(id));
     gallery.showModal();
+    gallery.querySelector('.gallery-overview').scrollTop = 0;
   });
 }
 gallery.querySelector('#previous-image').addEventListener('click', () => showImage(currentImage - 1));
@@ -178,4 +341,7 @@ gallery.addEventListener('keydown', event => {
   event.preventDefault();
   showImage(currentImage + (event.key === 'ArrowRight' ? 1 : -1));
 });
-gallery.addEventListener('close', () => image.removeAttribute('src'));
+gallery.addEventListener('close', () => {
+  image.removeAttribute('src');
+  imageStage.style.removeProperty('--image-glow');
+});

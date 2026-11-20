@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Jan Horacio Rivera De la Puente’s AutoCAD portfolio. Industrial piping, 3D modeling, and AutoLISP automation.">
 <title>Jan Rivera · AutoCAD Portfolio</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="assets/portfolio.css">
 <script src="assets/portfolio.js" defer></script>
 </head>
@@ -12,87 +13,104 @@
 <a class="skip" href="#contenido">Skip to content</a>
 <header class="top">
   <nav class="wrap" aria-label="Main navigation">
-    <a class="brand" href="#inicio">jan_rivera<span>.cad</span></a>
-    <div class="navlinks"><a href="#perfil">About me</a><a href="#herramientas">Tools</a><a href="#proyectos">Projects</a><a href="#contacto">Contact</a></div>
+    <a class="brand" href="#inicio"><img src="assets/favicon.svg" width="25" height="25" alt=""><span class="brand-name">jan_rivera<span>.cad</span></span></a>
+    <div class="navlinks"><a href="#proyectos">Projects</a><a href="#perfil">About me</a><a href="#herramientas">Tools</a><a href="#contacto">Contact</a></div>
   </nav>
 </header>
 <main id="contenido">
 <section class="hero wrap" id="inicio">
   <div>
-    <p class="role">Industrial CAD Design · Piping · AutoLISP Automation</p>
+    <p class="role">Industrial &amp; Project Engineering</p>
     <h1>Jan Horacio<br>Rivera De la Puente</h1>
-    <p class="lead">I model industrial facilities and piping systems in AutoCAD and write AutoLISP tools for repetitive drafting and documentation tasks.</p>
-    <div class="actions"><a class="button primary" href="#proyectos">Explore projects</a><a class="button" href="https://janrdlp.github.io/janrivera/">View QA portfolio</a></div>
+    <p class="lead">I coordinate production-line installations in food manufacturing, turn field measurements into AutoCAD layouts, and automate piping inventories for procurement.</p>
+    <div class="actions"><a class="button primary" href="https://drive.google.com/file/d/1Aw_SqKjx_-QBPV0L7OLfvKvJ_O0uyc1h/view?usp=drive_link">CV</a><a class="button" href="https://github.com/JanRDLP">GitHub</a><a class="button" href="#contacto">Contact</a></div>
   </div>
-  <a class="feature" href="#componentes" data-project="componentes" data-result-preview>
-    <img src="assets/codo-autocad.png" alt="3D pipe elbow generated with CREARPIEZA in AutoCAD" fetchpriority="high">
-    <span><strong>Piping Component Generation</strong><small>Explore the project and its 3D models</small></span>
+  <a class="feature" href="#terranoble" data-project="terranoble" data-feature-image="assets/terranoble/plant-overview.png">
+    <img src="assets/terranoble/plant-overview.png" alt="Isometric AutoCAD model of the Terranoble plant, showing equipment and utility routing" fetchpriority="high">
+    <span><strong>Terranoble · Tetra Recart R2</strong><small>Plant layout and utility routing</small></span>
   </a>
 </section>
-<section class="section wrap" id="perfil">
-  <h2>About me</h2>
-  <p class="intro">I work with 2D drawings and 3D models for industrial facilities. My CAD work covers equipment layouts, piping components, and utility routing. I develop AutoLISP routines to standardize component labels, organize drawing layers, and export inventories. My software QA background informs how I test these workflows and document their behavior.</p>
-</section>
-<section class="section wrap" id="herramientas">
-  <h2>Tools</h2>
-  <ul class="stack"><li>AutoCAD 2D and 3D</li><li>AutoLISP</li><li>Blocks and layers</li><li>CSV reporting</li></ul>
-</section>
 <section class="section wrap" id="proyectos">
+  <div class="project-heading">
   <h2>Projects</h2>
   <div class="filters" role="group" aria-label="Filter projects">
     <button type="button" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="modelos" aria-pressed="false">3D Modeling</button><button type="button" data-filter="autolisp" aria-pressed="false">AutoLISP</button>
   </div>
+  </div>
   <div class="projects">
-    <article id="componentes" class="card" data-category="modelos autolisp">
-      <div class="card-copy">
-        <p class="role">3D Modeling y AutoLISP</p>
-        <h3>Piping Component Generation</h3>
-        <p>I developed <code>CREARPIEZA</code> to configure a fitting and review its label, block name, and destination layer before placing it in the drawing. The 3D library shows the resulting components with their original AutoLISP labels.</p>
-        <div class="actions"><a class="button" href="https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation">Source code and usage</a></div>
-        <div class="viewer-picker">
-          <label for="family">Component family</label>
-          <select id="family">
-            <option value="codos">Elbows</option><option value="tees">Tees</option><option value="cruces">Crosses</option>
-            <option value="brida">Flanges</option><option value="cople">Couplings</option><option value="niple">Nipples</option>
-            <option value="reduccion">Reducers</option><option value="tapon">Caps and plugs</option><option value="filtro-yee">Y-strainers</option>
-            <option value="valvula-bola">Ball valves</option><option value="valvula-check">Check valves</option><option value="valvula-globo">Globe valves</option>
-          </select>
-          <a class="button primary" id="family-viewer" href="visores/visor-codos.html" data-open-viewer>Open 3D viewer</a>
-        </div>
-      </div>
-      <a class="project-preview" href="assets/crear-pieza.png" data-project="componentes">
-        <img class="project-image" src="assets/crear-pieza.png" alt="CREARPIEZA dialog showing an elbow configuration and its generated AutoLISP label" width="721" height="682" loading="lazy">
-      </a>
-
-    </article>
     <article id="terranoble" class="card" data-category="modelos">
       <div class="card-copy">
         <p class="role">Facility Modeling</p>
-        <h3>Terranoble and Pilot Plant</h3>
-        <p>This AutoCAD model shows the facility layout, equipment, and utility routing. The interactive view uses geometry and colors extracted from the DWG to make the systems easier to distinguish.</p>
-        <div class="actions"><a class="button primary" href="visores/visor-terranoble-dwg.html" data-open-viewer>Open Terranoble viewer</a><a class="button" href="assets/terranoble.png" data-project="terranoble">View project gallery</a></div>
+        <h3><button type="button" class="project-title" data-project="terranoble" aria-haspopup="dialog">Terranoble · Tetra Recart R2 Line Installation</button></h3>
+        <p>Coordinated equipment layout and modeled utility piping for a food production line and its pilot plant.</p>
+        <ul class="stack badges" aria-label="Skills"><li><img class="skill-badge" src="https://img.shields.io/badge/Plant%20Layout-315E75?style=flat" alt="Plant Layout" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/AutoCAD%203D-C22243?style=flat&amp;logo=autodesk&amp;logoColor=white" alt="AutoCAD 3D" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Utility%20Piping-315E75?style=flat" alt="Utility Piping" height="24" loading="lazy" referrerpolicy="no-referrer"></li></ul>
       </div>
       <a class="project-preview" href="assets/terranoble.png" data-project="terranoble">
         <img class="project-image" src="assets/terranoble.png" alt="Top view of Terranoble showing equipment and utility piping in AutoCAD" width="666" height="515" loading="lazy">
       </a>
     </article>
+    <article id="componentes" class="card" data-category="modelos autolisp">
+      <div class="card-copy">
+        <p class="role">3D Modeling &amp; AutoLISP</p>
+        <h3><button type="button" class="project-title" data-project="componentes" aria-haspopup="dialog">Piping Component Generation</button></h3>
+        <p>Built an AutoLISP tool that generates 3D pipe fittings with reusable geometry and structured part data.</p>
+        <ul class="stack badges" aria-label="Skills"><li><img class="skill-badge" src="https://img.shields.io/badge/AutoLISP-356388?style=flat&amp;logo=lisp&amp;logoColor=white" alt="AutoLISP" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Parametric%20Modeling-246A61?style=flat" alt="Parametric Modeling" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/CAD%20Data-635482?style=flat" alt="CAD Data" height="24" loading="lazy" referrerpolicy="no-referrer"></li></ul>
+      </div>
+      <a class="project-preview" href="assets/piping-components/pipe-segment-dialog.png" data-project="componentes">
+        <img class="project-image" src="assets/piping-components/pipe-segment-dialog.png" alt="CREARPIEZA dialog configured for a tagged pipe segment" width="702" height="601" loading="lazy">
+      </a>
+
+    </article>
+    <article id="inventory" class="card" data-category="autolisp">
+      <div class="card-copy">
+        <p class="role">CAD Data &amp; Materials Control</p>
+        <h3><button type="button" class="project-title" data-project="inventory" aria-haspopup="dialog">Piping Inventory Automation</button></h3>
+        <p>Exported 1,409 tagged AutoCAD records to CSV to support materials consolidation for quotation and purchasing.</p>
+        <ul class="stack badges" aria-label="Skills"><li><img class="skill-badge" src="https://img.shields.io/badge/AutoLISP-356388?style=flat&amp;logo=lisp&amp;logoColor=white" alt="AutoLISP" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat&amp;logo=microsoftexcel&amp;logoColor=white" alt="Microsoft Excel" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Materials%20Control-315E75?style=flat" alt="Materials Control" height="24" loading="lazy" referrerpolicy="no-referrer"></li></ul>
+      </div>
+      <a class="project-preview" href="assets/inventory-preview.png" data-project="inventory">
+        <img class="project-image" src="assets/inventory-preview.png" alt="Preview of the AutoCAD inventory export with service, component type, size, length, and part tag" width="1244" height="565" loading="lazy">
+      </a>
+    </article>
     <article id="rutinas" class="card" data-category="autolisp">
       <div class="card-copy">
         <p class="role">Drafting Automation</p>
-        <h3>Layer Control, Tagging, and Inventory</h3>
-        <p>I use <code>DN</code> to draft pipework by nominal diameter, <code>LayerControl</code> to manage related layers together, and <code>ExportarEtiquetas</code> to turn component tags into a CSV inventory.</p>
-        <div class="actions"><a class="button" href="https://github.com/JanRDLP/autolisp-routines">View routines and documentation</a></div>
+        <h3><button type="button" class="project-title" data-project="rutinas" aria-haspopup="dialog">AutoCAD Drafting Utilities</button></h3>
+        <p>Developed focused drafting tools for layer visibility, pipe layout, and repetitive copying.</p>
+        <ul class="stack badges" aria-label="Skills"><li><img class="skill-badge" src="https://img.shields.io/badge/AutoCAD%202D%2F3D-C22243?style=flat&amp;logo=autodesk&amp;logoColor=white" alt="AutoCAD 2D/3D" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/AutoLISP-356388?style=flat&amp;logo=lisp&amp;logoColor=white" alt="AutoLISP" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Layer%20Management-246A61?style=flat" alt="Layer Management" height="24" loading="lazy" referrerpolicy="no-referrer"></li></ul>
       </div>
-      <a class="project-preview" href="assets/control-de-capas.png" data-project="rutinas">
-        <img class="project-image" src="assets/control-de-capas.png" alt="AutoCAD layer-control dialog with grouped visibility controls" loading="lazy">
+      <a class="project-preview" href="assets/drafting-utilities/layer-control.png" data-project="rutinas">
+        <img class="project-image" src="assets/drafting-utilities/layer-control.png" alt="AutoCAD layer-control dialog with grouped visibility controls" width="427" height="365" loading="lazy">
       </a>
     </article>
   </div>
 </section>
-<section class="section wrap" id="contacto">
-  <h2>Contact</h2>
-  <div class="actions"><a class="button" href="https://www.linkedin.com/in/jan-horacio-rivera-de-la-puente/">LinkedIn</a><a class="button" href="https://github.com/JanRDLP">GitHub</a></div>
+<div class="profile-grid wrap">
+<section class="section" id="perfil">
+  <h2>About me</h2>
+  <div class="intro about-copy">
+    <p>I’m an Industrial and Systems Engineering graduate and a Project Coordinator at Grupo Alimentos del Norte. I plan installations, reconfigurations, and expansions for food manufacturing lines. My work includes measuring equipment in the field and turning those measurements into 2D plans and 3D models that guide installation.</p>
+    <p>At Terranoble, I reviewed supplier drawings for the Tetra Recart R2 filling line, adjusted equipment coordinates, modeled utility piping, and supervised civil works. I also sized two preparation lines based on product weight, density, and filling times, and reviewed equipment options with suppliers. At Vision Foods, I’m working on a canning-line reconfiguration designed to improve material flow and shorten forklift routes.</p>
+    <p>I build AutoLISP tools to link piping components in AutoCAD to the materials lists used for procurement. For one project, I exported 1,409 inventory records and used them to consolidate the materials list for a quotation and a purchase order.</p>
+  </div>
 </section>
+<div class="profile-sidebar">
+<section class="section" id="herramientas">
+  <h2>Tools</h2>
+  <div class="skill-groups"><section><h3>Engineering</h3><ul class="stack badges" aria-label="Skills"><li><img class="skill-badge" src="https://img.shields.io/badge/Plant%20Layout-315E75?style=flat" alt="Plant Layout" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Field%20Measurement-315E75?style=flat" alt="Field Measurement" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Equipment%20Sizing-315E75?style=flat" alt="Equipment Sizing" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Project%20Coordination-315E75?style=flat" alt="Project Coordination" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Materials%20Control-315E75?style=flat" alt="Materials Control" height="24" loading="lazy" referrerpolicy="no-referrer"></li></ul></section><section><h3>CAD &amp; Automation</h3><ul class="stack badges" aria-label="Skills"><li><img class="skill-badge" src="https://img.shields.io/badge/AutoCAD%202D%2F3D-C22243?style=flat&amp;logo=autodesk&amp;logoColor=white" alt="AutoCAD 2D/3D" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/AutoLISP-356388?style=flat&amp;logo=lisp&amp;logoColor=white" alt="AutoLISP" height="24" loading="lazy" referrerpolicy="no-referrer"></li></ul></section><section><h3>Documentation &amp; Data</h3><ul class="stack badges" aria-label="Skills"><li><img class="skill-badge" src="https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat&amp;logo=microsoftexcel&amp;logoColor=white" alt="Microsoft Excel" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Lucidchart-A84514?style=flat&amp;logo=lucidchart&amp;logoColor=white" alt="Lucidchart" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white" alt="Python" height="24" loading="lazy" referrerpolicy="no-referrer"></li><li><img class="skill-badge" src="https://img.shields.io/badge/SQL-336791?style=flat&amp;logo=postgresql&amp;logoColor=white" alt="SQL" height="24" loading="lazy" referrerpolicy="no-referrer"></li></ul></section></div>
+</section>
+<section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+  <div>
+    <h2 id="contact-title">Contact</h2>
+    <p>For inquiries about industrial project coordination, utility piping design, or AutoCAD automation, reach me on LinkedIn.</p>
+  </div>
+  <div class="actions">
+    <a class="button primary" href="https://www.linkedin.com/in/jan-horacio-rivera-de-la-puente/">Connect on LinkedIn</a>
+    <a class="button" href="https://github.com/JanRDLP">View GitHub profile</a>
+  </div>
+</section>
+</div>
+</div>
 </main>
 <footer class="wrap">Jan Horacio Rivera De la Puente</footer>
 <dialog id="viewer" aria-labelledby="viewer-title">
@@ -103,8 +121,24 @@
 <dialog id="gallery" aria-labelledby="gallery-title">
   <div class="dialog-head"><h2 id="gallery-title"></h2><form method="dialog"><button type="submit" autofocus>Close</button></form></div>
   <div class="gallery-body">
-    <section class="gallery-overview" aria-label="Project overview"><h3>Project overview</h3><p id="gallery-summary"></p><p id="gallery-work"></p><a id="gallery-case">Read project case study</a><section id="utility-legend" hidden><h4>Utility color legend</h4><ul></ul></section></section>
-    <figure><img id="gallery-image" alt=""><figcaption id="gallery-caption"></figcaption><div id="gallery-controls" class="actions"><button type="button" id="previous-image">Previous</button><span id="image-position" aria-live="polite"></span><button type="button" id="next-image">Next</button></div></figure>
+    <section class="gallery-overview" tabindex="0" aria-label="Project overview"><h3>Project overview</h3>
+      <p id="gallery-summary"></p>
+      <h4>My contribution</h4>
+      <p id="gallery-contribution"></p>
+      <h4>Workflow</h4>
+      <ul id="gallery-workflow"></ul>
+      <h4>Results and evidence</h4>
+      <p id="gallery-result"></p><div class="gallery-project-actions"><a id="gallery-case">Read project case study</a><a data-gallery-action="terranoble" hidden class="button" href="visores/visor-terranoble-dwg.html" data-open-viewer>Open Terranoble viewer</a><a data-gallery-action="componentes" hidden class="button" href="https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation">Source code and usage</a><a data-gallery-action="rutinas" hidden class="button" href="https://github.com/JanRDLP/autolisp-routines">View routines and documentation</a></div><div id="gallery-tools" hidden><div class="viewer-picker">
+          <label for="family">Component family</label>
+          <select id="family">
+            <option value="codos">Elbows</option><option value="tees">Tees</option><option value="cruces">Crosses</option>
+            <option value="brida">Flanges</option><option value="cople">Couplings</option><option value="niple">Nipples</option>
+            <option value="reduccion">Reducers</option><option value="tapon">Caps and plugs</option><option value="filtro-yee">Y-strainers</option>
+            <option value="valvula-bola">Ball valves</option><option value="valvula-check">Check valves</option><option value="valvula-globo">Globe valves</option>
+          </select>
+          <a class="button primary" id="family-viewer" href="visores/visor-codos.html" data-open-viewer>Open 3D viewer</a>
+        </div></div><section id="utility-legend" hidden><h4>Utility color legend</h4><ul></ul></section></section>
+    <figure><div class="gallery-stage"><img id="gallery-image" alt=""></div><figcaption id="gallery-caption"></figcaption><div id="gallery-controls" class="actions"><button type="button" id="previous-image">Previous</button><span id="image-position" aria-live="polite"></span><button type="button" id="next-image">Next</button></div></figure>
   </div>
 </dialog>
 </body>

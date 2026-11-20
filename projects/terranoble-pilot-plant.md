@@ -1,8 +1,22 @@
-# Terranoble and Pilot Plant
+# Terranoble · Tetra Recart R2 Line Installation
 
 ## Project overview
 
-The AutoCAD model brings together the facility layout, equipment placement, and utility routing for Terranoble and its pilot plant. The portfolio includes an interactive 3D model and annotated screenshots covering the retort bank, processing and handling equipment, and cooling-water recirculation.
+The Tetra Recart R2 installation required coordinating equipment placement and utility connections for a food production line and its pilot plant. The AutoCAD model gave the installation team a common layout for reviewing how equipment, conveyors, and services would fit together.
+
+## My contribution
+
+I reviewed the supplier’s equipment and utility drawings, adjusted equipment coordinates, and modeled the service routes in AutoCAD 3D. I also supervised civil works and worked with the team to plan a temporary feed line.
+
+## Workflow
+
+- Identify equipment footprints, positions, and service connection points from the installation drawings.
+- Update the plant layout and route services around the filler, retorts, and adjacent handling equipment.
+- Use layer colors to distinguish utility systems and review how individual branches connect to the equipment.
+
+## Results
+
+The annotated views show the modeled utility routes and equipment interfaces. The DWG-derived 3D viewer keeps the object and layer colors so each service can be followed around the facility.
 
 ## Utility color legend
 

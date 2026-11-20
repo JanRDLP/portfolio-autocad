@@ -10,7 +10,8 @@ Open [index.html](index.html) from a local copy of this repository to explore th
 
 - [Piping Component Generation](projects/piping-component-generation.md) · [Source code](https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation)
 - [Terranoble and Pilot Plant](projects/terranoble-pilot-plant.md) · [Download the 3D viewer](visores/visor-terranoble-dwg.html?raw=true) (21 MB)
-- [Layer Control, Tagging, and Inventory](projects/layer-control-tagging-inventory.md) · [Source code](https://github.com/JanRDLP/autolisp-routines)
+- [Piping Inventory Automation](projects/piping-inventory-automation.md)
+- [AutoCAD Drafting Utilities](projects/layer-control-tagging-inventory.md) · [Source code](https://github.com/JanRDLP/autolisp-routines)
 
 ## Interactive piping library
 
