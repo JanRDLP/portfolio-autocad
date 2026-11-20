@@ -34,3 +34,7 @@ Descarga el HTML con **Download raw file** y ábrelo en tu navegador. Cada visor
 - [Válvulas check](visores/visor-valvula-check.html)
 - [Filtros en Y](visores/visor-filtro-yee.html)
 - [Válvulas de globo](visores/visor-valvula-globo.html)
+
+### Terranoble y planta piloto
+
+[Descargar el visor 3D de Terranoble](visores/visor-terranoble-dwg.html?raw=true) (50 MB). Abre el HTML en tu navegador para explorar la planta y su geometría extraída del DWG. Arrastra para girar, usa la rueda para acercar y mantén Mayús al arrastrar para desplazar la vista.
