@@ -257,7 +257,6 @@ for (const card of projects) {
   selectedSlide.set(id, 0);
   const setPreviewBackground = () => {
     preview.dataset.imageKind = screenshotKind(picture.src);
-    preview.style.setProperty('--preview-glow', 'url(' + JSON.stringify(picture.src) + ')');
   };
   setPreviewBackground();
   card.addEventListener('click', event => {
