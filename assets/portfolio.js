@@ -27,7 +27,9 @@ for (const link of document.querySelectorAll('[data-open-viewer]')) {
       ? '3D Viewer · ' + family.selectedOptions[0].textContent
       : '3D Viewer · Terranoble and Pilot Plant';
     viewer.showModal();
-    frame.src = link.href;
+    const viewerUrl = new URL(link.href);
+    viewerUrl.searchParams.set('v', 'mobile-1');
+    frame.src = viewerUrl.href;
   });
 }
 viewer.addEventListener('close', () => frame.removeAttribute('src'));
