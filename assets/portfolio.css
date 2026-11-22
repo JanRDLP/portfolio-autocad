@@ -103,6 +103,14 @@ iframe{display:block;border:0;width:100%;height:76vh;background:#eef2f6}
 .badges{gap:5px;margin:0}
 .stack.badges li{padding:0;border:0;background:none}
 .skill-badge{display:block;width:auto;max-width:100%;height:24px;color:var(--ink);font-size:.85rem}
+@media (hover:hover) and (pointer:fine){
+  .skill-badge{transition:transform .16s ease,filter .16s ease}
+  .skill-badge:hover{transform:scale(1.05);filter:brightness(1.16) drop-shadow(0 2px 4px #0006)}
+}
+@media (prefers-reduced-motion:reduce){
+  .skill-badge{transition:none}
+  .skill-badge:hover{transform:none}
+}
 .card .badges{margin-block:0 8px}
 .projects{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr}
 .card{display:flex;flex-direction:column;align-items:stretch;gap:9px;padding:12px;cursor:pointer;transition:border-color .18s}
