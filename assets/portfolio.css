@@ -306,3 +306,6 @@ body{background:linear-gradient(165deg,#1c2b36 0,var(--bg) 34rem)}
 }
 .card .cad-frame{padding-inline:14px}
 #gallery-image{padding:clamp(9px,1vw,15px)}
+.hero > div{min-width:0;container-type:inline-size}
+.hero h1{font-size:min(3.7rem,9.5cqi)}
+.hero h1 span{display:block;white-space:nowrap}
