@@ -11,6 +11,17 @@ canvas{width:100%;height:clamp(320px,59vh,590px);display:block;touch-action:none
 .toolbar{position:absolute;bottom:12px;right:12px;display:flex;gap:5px} button{font:inherit;border:1px solid #c9d4df;border-radius:8px;padding:7px 12px;background:#fff;color:#122235;cursor:pointer}
 label{display:block;font-weight:650;margin-top:18px} select{margin-top:7px;font:inherit;border:1px solid #c9d4df;border-radius:8px;padding:8px;max-width:100%;color:#122235;background:#fff}
 output{display:block;margin-top:14px;min-height:1.5em;font-weight:650;color:#124e83}
+
+@media (max-width:600px), (max-height:540px){
+  main{padding:14px 10px}
+  h1{font-size:clamp(21px,6vw,29px)}
+  main p{margin:5px 0 9px;font-size:.9rem}
+  canvas{height:clamp(130px,52dvh,420px)}
+  .toolbar,.tools{right:6px;bottom:6px;gap:4px}
+  .toolbar button,.tools button{min-height:35px;padding:4px 7px;font-size:.875rem}
+  label{margin-top:8px}
+  output{margin-top:7px;overflow-wrap:anywhere}
+}
 </style>
 <main>
 <h1>Reducers</h1>
