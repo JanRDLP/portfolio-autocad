@@ -6,8 +6,8 @@
 <meta name="description" content="Jan Horacio Rivera De la Puente’s AutoCAD portfolio. Industrial piping, 3D modeling, and AutoLISP automation.">
 <title>Jan Rivera · AutoCAD Portfolio</title>
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/portfolio.css?v=mobile-1">
-<script src="assets/portfolio.js?v=mobile-1" defer></script>
+<link rel="stylesheet" href="assets/portfolio.css?v=catalog-1">
+<script src="assets/portfolio.js?v=catalog-1" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenido">Skip to content</a>
@@ -128,7 +128,49 @@
       <h4>Workflow</h4>
       <ul id="gallery-workflow"></ul>
       <h4>Results and evidence</h4>
-      <p id="gallery-result"></p><div class="gallery-project-actions"><a id="gallery-case">Read project case study</a><a data-gallery-action="terranoble" hidden class="button" href="visores/visor-terranoble-dwg.html" data-open-viewer>Open Terranoble viewer</a><a data-gallery-action="componentes" hidden class="button" href="https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation">Source code and usage</a><a data-gallery-action="rutinas" hidden class="button" href="https://github.com/JanRDLP/autolisp-routines">View routines and documentation</a></div><div id="gallery-tools" hidden><div class="viewer-picker">
+      <p id="gallery-result"></p>
+<details id="component-catalog" hidden>
+<summary>Component catalog · 19 families</summary>
+<p>CREARPIEZA can generate 19 component families. Available sizes and connections depend on the material and model selected.</p>
+<table><caption>Component families</caption><thead><tr><th scope="col">Family</th><th scope="col">Materials and variants</th></tr></thead><tbody>
+<tr><th scope="row">Elbow</th><td>Butt-weld and threaded black steel, threaded galvanized steel, and PVC. Metal options include 45° and 90° with long or short radius where available. PVC also includes 11.25°, 15°, 22.5°, 30°, and 60° catalog options.</td></tr>
+<tr><th scope="row">Tee</th><td>Butt-weld black steel, galvanized steel, and PVC. Equal and reducing sizes depend on the table. PVC includes solvent-weld, threaded, and mixed ends.</td></tr>
+<tr><th scope="row">Cross</th><td>Butt-weld black steel, galvanized steel, and PVC, in the nominal size combinations available in the catalog.</td></tr>
+<tr><th scope="row">Coupling</th><td>Galvanized steel and PVC. PVC options include solvent-weld, female-threaded at both ends, and slip couplings without an internal stop.</td></tr>
+<tr><th scope="row">Nipple</th><td>Threaded galvanized steel, butt-weld carbon steel, and PVC. PVC options include two threaded ends, one threaded end, or plain ends.</td></tr>
+<tr><th scope="row">Adapter</th><td>Male-to-female galvanized steel and PVC. PVC options combine solvent-weld sockets, plain spigots, and male or female threads.</td></tr>
+<tr><th scope="row">Reducer</th><td>Concentric and eccentric butt-weld steel reducers, galvanized reducing bushings and bell reducers, and PVC bushings and bell reducers with solvent-weld, threaded, or eccentric options as listed.</td></tr>
+<tr><th scope="row">Cap</th><td>Butt-weld black steel, threaded galvanized steel, and PVC with a solvent-weld socket or female thread.</td></tr>
+<tr><th scope="row">Male plug</th><td>Galvanized steel and PVC. PVC options include plain spigots and male threads.</td></tr>
+<tr><th scope="row">Union</th><td>Galvanized metal reference model and solvent-weld PVC union.</td></tr>
+<tr><th scope="row">Straight pipe segment</th><td>Black steel, galvanized steel, PVC, copper, and conduit. The user places it by selecting two endpoints in the drawing.</td></tr>
+<tr><th scope="row">Wye and double wye</th><td>Solvent-weld PVC, with size combinations from the catalog.</td></tr>
+<tr><th scope="row">Ball valve</th><td>Female-to-female or male-to-male threaded ends, and flanged models. See model options below.</td></tr>
+<tr><th scope="row">Check valve</th><td>Horizontal, Y-pattern, lift, spring, and flanged swing configurations.</td></tr>
+<tr><th scope="row">Y-strainer</th><td>Threaded bronze and Class 150 or 300 flanged variants.</td></tr>
+<tr><th scope="row">Globe valve</th><td>Threaded stainless steel and flanged forged steel.</td></tr>
+<tr><th scope="row">Pressure gauge</th><td>Bottom-mounted ¼-inch NPT connection with selectable dial and pressure range.</td></tr>
+<tr><th scope="row">Flange</th><td>Blind, hubless, and weld-neck models in Class 150 and 300 RF. Place individually or as a facing pair.</td></tr>
+<tr><th scope="row">Pigtail siphon</th><td>Black steel, galvanized steel, and 316 stainless steel depending on the reference dimensions.</td></tr>
+</tbody></table>
+<table><caption>Valve, strainer, and siphon models</caption><thead><tr><th scope="col">Family</th><th scope="col">Available models</th></tr></thead><tbody>
+<tr><th scope="row">Ball valve</th><td>Unrated generic female-to-female and male-to-male threaded variants, brass 600 WOG, carbon steel 1000 WOG, 316 stainless steel 1000 WOG, Class 150 and 300 flanged floating, and Class 150 flanged trunnion-mounted.</td></tr>
+<tr><th scope="row">Check valve</th><td>PN16 horizontal brass, Class 150 bronze Y-pattern, bronze lift, threaded stainless steel spring, PN16 flanged swing, and 3-inch Class 300 flanged swing.</td></tr>
+<tr><th scope="row">Y-strainer</th><td>Threaded bronze, Class 150 flanged, and Class 300 flanged steel.</td></tr>
+<tr><th scope="row">Globe valve</th><td>PN16 threaded 316 stainless steel and Class 150 flanged forged steel.</td></tr>
+<tr><th scope="row">Pigtail siphon</th><td>Schedule 40 black steel, galvanized steel, or 316 stainless steel with ¼-inch NPT. Schedule 80 316 stainless steel with ½-inch NPT.</td></tr>
+</tbody></table>
+<table><caption>Straight pipe specifications</caption><thead><tr><th scope="col">Material</th><th scope="col">Schedules or types</th></tr></thead><tbody>
+<tr><th scope="row">Black and galvanized steel</th><td>Schedules 10, 20, 30, 40, 80, and 160</td></tr>
+<tr><th scope="row">PVC</th><td>Schedules 40 and 80</td></tr>
+<tr><th scope="row">Copper</th><td>Types M, L, and K</td></tr>
+<tr><th scope="row">Conduit</th><td>R0, R1, and C40</td></tr>
+</tbody></table>
+<h4>Full PVC catalog</h4>
+<p>The full PVC catalog includes 1,519 Schedule 40 fitting references and 1,428 Schedule 80 nipple references. Enable “Mostrar catálogo completo y modelos especiales” to see the additional options. These counts describe catalog references and dimensional combinations within the component families.</p>
+<p>Model specifications describe the geometry represented in AutoCAD.</p>
+</details>
+<div class="gallery-project-actions"><a id="gallery-case">Read project case study</a><a data-gallery-action="terranoble" hidden class="button" href="visores/visor-terranoble-dwg.html" data-open-viewer>Open Terranoble viewer</a><a data-gallery-action="componentes" hidden class="button" href="https://github.com/JanRDLP/autolisp-routines/tree/main/piping-component-generation">Source code and usage</a><a data-gallery-action="rutinas" hidden class="button" href="https://github.com/JanRDLP/autolisp-routines">View routines and documentation</a></div><div id="gallery-tools" hidden><div class="viewer-picker">
           <label for="family">Component family</label>
           <select id="family">
             <option value="codos">Elbows</option><option value="tees">Tees</option><option value="cruces">Crosses</option>

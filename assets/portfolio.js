@@ -307,6 +307,9 @@ for (const link of document.querySelectorAll('[data-project]')) {
     screenshots = projectSlides.get(id);
     utilityLegend.hidden = id !== 'terranoble';
     galleryTools.hidden = id !== 'componentes';
+    const catalog = gallery.querySelector('#component-catalog');
+    catalog.hidden = id !== 'componentes';
+    catalog.open = false;
     for (const action of galleryActions) action.hidden = action.dataset.galleryAction !== id;
     gallery.querySelector('#gallery-title').textContent = project.title;
     gallery.querySelector('#gallery-summary').textContent = project.overview;
