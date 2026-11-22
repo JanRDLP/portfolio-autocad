@@ -59,9 +59,9 @@ iframe{display:block;border:0;width:100%;height:76vh;background:#eef2f6}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .project-preview{display:block;border-radius:8px;cursor:zoom-in}
 .project-preview:hover{outline:1px solid var(--accent)}
-#gallery[open]{display:grid;grid-template-rows:auto minmax(0,1fr);height:min(800px,94dvh);max-height:94dvh;overflow:hidden}
-.gallery-body{display:grid;grid-template-columns:minmax(205px,.86fr) minmax(0,2.3fr);grid-template-rows:minmax(0,1fr);gap:clamp(10px,2vw,22px);padding:clamp(8px,1.5vw,16px);min-height:0;overflow:hidden}
-.gallery-overview{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-inline-end:10px}
+#gallery[open]{width:min(1440px,97vw);display:grid;grid-template-rows:auto minmax(0,1fr);height:min(800px,94dvh);max-height:94dvh;overflow:hidden}
+.gallery-body{display:grid;grid-template-columns:minmax(250px,39fr) minmax(0,61fr);grid-template-rows:minmax(0,1fr);gap:clamp(10px,2vw,22px);padding:clamp(8px,1.5vw,16px);min-height:0;overflow:hidden}
+.gallery-overview{min-width:0;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-inline-end:clamp(10px,1.5vw,20px);border-inline-end:1px solid var(--border)}
 .gallery-overview:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
 .gallery-overview p,.gallery-body figcaption{color:var(--muted)}
 .gallery-body figure{display:flex;flex-direction:column;margin:0;min-width:0;min-height:0;gap:clamp(3px,1vh,8px)}
@@ -81,7 +81,7 @@ iframe{display:block;border:0;width:100%;height:76vh;background:#eef2f6}
  #gallery-controls button{min-height:36px;padding-inline:7px}
  .gallery-overview{min-width:0;overflow-wrap:anywhere}
  .dialog-head h2{min-width:0;overflow-wrap:anywhere}
- .gallery-overview{grid-row:2;border-top:1px solid var(--border);padding-top:8px}
+ .gallery-overview{grid-row:2;border-top:1px solid var(--border);border-inline-end:0;padding-top:8px}
 }
 @media(max-height:480px){
  #gallery .dialog-head{padding-block:4px}
@@ -165,12 +165,7 @@ body{
 .gallery-stage{
   position:relative;isolation:isolate;flex:1 1 0;min-height:0;overflow:hidden;
   border:1px solid #a6dcf34a;border-radius:11px;
-  background:linear-gradient(140deg,#394e5d,#2e414f);
-}
-.gallery-stage::before{
-  content:"";position:absolute;z-index:-1;inset:-14%;
-  background:var(--image-glow,none) center/cover no-repeat;
-  opacity:.36;filter:blur(32px) saturate(.82);pointer-events:none;
+  background:#171e27 radial-gradient(circle,#34414d 1px,transparent 1.35px) 0 0/21px 21px;
 }
 .gallery-thumbnails button[aria-pressed="true"]{background:#264b62;border-color:var(--accent)}
 @media(max-width:740px){.hero::before{inset:25% 0 0}}
@@ -244,18 +239,14 @@ body{background:linear-gradient(165deg,#1c2b36 0,var(--bg) 34rem)}
 .feature img{
   filter:brightness(1.08) contrast(1.045);
 }
-.card .project-preview[data-image-kind="interface"],
-.gallery-stage[data-image-kind="interface"]{
+.card .project-preview[data-image-kind="interface"]{
   background:radial-gradient(ellipse at 45% 40%,#455864,#253440 80%);
 }
-.card .project-preview[data-image-kind="interface"]::before,
-.gallery-stage[data-image-kind="interface"]::before{opacity:0}
-.card .project-preview[data-image-kind="data"],
-.gallery-stage[data-image-kind="data"]{
+.card .project-preview[data-image-kind="interface"]::before{opacity:0}
+.card .project-preview[data-image-kind="data"]{
   background:radial-gradient(ellipse at 45% 40%,#2c4453,#1b2a34 80%);
 }
-.card .project-preview[data-image-kind="data"]::before,
-.gallery-stage[data-image-kind="data"]::before{opacity:.16}
+.card .project-preview[data-image-kind="data"]::before{opacity:.16}
 .card .project-preview img,#gallery-image{
   filter:drop-shadow(0 4px 8px #09141b38);
 }
@@ -267,7 +258,6 @@ body{background:linear-gradient(165deg,#1c2b36 0,var(--bg) 34rem)}
 @media(max-width:680px){.feature img{height:clamp(120px,29vw,175px)}}
 
 #gallery::backdrop{background:#253747b8;backdrop-filter:blur(4px)}
-.gallery-stage[data-image-kind="interface"]{background:#435663}
 .gallery-stage[data-image-kind="interface"] #gallery-image{filter:none}
 .gallery-overview h4{margin:14px 0 4px;color:var(--ink);font-size:.95rem}
 .gallery-overview #gallery-workflow{margin:0 0 12px;padding-inline-start:19px;color:var(--muted)}

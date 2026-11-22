@@ -232,7 +232,6 @@ function showImage(index) {
   const screenshot = screenshots[currentImage];
   image.src = screenshot.src;
   imageStage.dataset.imageKind = screenshotKind(image.src);
-  imageStage.style.setProperty('--image-glow', 'url(' + JSON.stringify(image.src) + ')');
   image.alt = screenshot.alt;
   caption.textContent = screenshot.caption;
   position.textContent = (currentImage + 1) + ' / ' + screenshots.length;
@@ -348,5 +347,4 @@ gallery.addEventListener('keydown', event => {
 });
 gallery.addEventListener('close', () => {
   image.removeAttribute('src');
-  imageStage.style.removeProperty('--image-glow');
 });
